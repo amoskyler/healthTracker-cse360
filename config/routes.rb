@@ -10,12 +10,6 @@ HealthTracker::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get "user/home"
-  get "user/weight"
-  get "user/sleep"
-  get "user/activity"
-  get "user/calories"
-  get "user/blood"
   
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
