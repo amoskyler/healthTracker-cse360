@@ -1,14 +1,22 @@
 HealthTracker::Application.routes.draw do
+  
+  
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'login#index'
+  root 'static#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
+  get "user/home"
+  get "user/weight"
+  get "user/sleep"
+  get "user/activity"
+  get "user/calories"
+  get "user/blood"
+  
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
