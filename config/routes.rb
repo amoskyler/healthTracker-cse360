@@ -1,4 +1,5 @@
 HealthTracker::Application.routes.draw do
+  get "profile/userProfile"
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

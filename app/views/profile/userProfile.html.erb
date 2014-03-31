@@ -1,0 +1,168 @@
+<div class="page">
+     <div class="off-canvas-wrap">
+          <div class="inner-wrap">
+               <div class="sticky">
+                    <nav class="tab-bar" data-topbar>
+                         <section class="left-small">
+                              <a style="font-size: 2.7rem; padding-left: 5px;" class="left-off-canvas-toggle step fi-torso size-72">
+                                   <span></span>
+                              </a>
+                         </section>
+
+                         <section class="middle tab-bar-section">
+                              <h1 class="title">Moveo | User Profile</h1>
+                         </section>
+                    </nav>
+               </div>
+               <aside class="left-off-canvas-menu">
+                    <ul class="off-canvas-list">
+                         <li>
+                         <label>Moveo | User Panel</label>
+                         </li>
+                         <li>
+                         <div class="panel">
+                              <div class="th">
+                                   <img src="../assets/no_user.jpg">
+                              </div>
+                         <p style="text-align: center;">John Smith</p>
+                         </div>
+                         </li>
+                         <li>
+                         <a href="#">User Settings</a>
+                         <a href="#">Food Records</a>
+                         <a href="#">Sleep Records</a>
+                         <a href="#">Another Thing</a>
+                         <a href="#">Something Else</a>
+                         </li>
+                    </ul>
+               </aside>
+
+               <section class="main-section">
+                    <!-- Main content goes here -->
+                    <h2>Profile Overview:</h2>
+                         <div class="large-12 columns">
+                              <div class="large-block-grid-2">
+                                   <li><div class="panel"><h3>Calorie Consumption</h3><div  id="chartOne"></div></div></li>
+                                   <li><div class="panel"><h3>Hours of sleep: </h3><div id="chartTwo"></div></div></li>
+                              </div>
+                         </div>
+                    <div class="row">
+                         <div class="large-offset-2 large-8 columns">
+                              <table>
+                                   <thead>
+                                        <tr>
+                                             <th width="250">Activity/Condition Type</th>
+                                             <th width="150">Average</th>
+                                             <th width="180">Status</th>
+                                        </tr>
+                                   </thead>
+                                   <tbody>
+                                   <tr>
+                                        <th>Sleep</th>
+                                        <th>6 hours</th>
+                                        <th class="alert-box warning">Under Goal</th>
+                                   </tr>
+                                   <tr>
+                                        <th>Calorie Intake</th>
+                                        <th>1850 Calories</th>
+                                        <th class="alert-box success">Goal Met!</th>
+                                   </tr>
+                                   <tr>
+                                        <th>Something Else</th>
+                                        <th>Something Insane</th>
+                                        <th class="alert-box error">Dangerous Level!!!</th>
+                                   </tr>
+                                   </tbody>
+                              </table>
+                         </div>
+                    </div>
+               </section>
+
+               <a class="exit-off-canvas"></a>
+          </div>
+     </div>
+</div>
+<script>
+new Morris.Line({
+          // ID of the element in which to draw the chart.
+element: 'chartOne',
+// Chart data records -- each entry in this array corresponds to a point on
+// the chart.
+data: [
+{ d: '2014-03-01',calorie: 1200},
+{ d: '2014-03-02',calorie: 1700},
+{ d: '2014-03-03',calorie: 3200},
+{ d: '2014-03-04',calorie: 3000},
+{ d: '2014-03-05',calorie: 2700},
+{ d: '2014-03-06',calorie: 2200},
+{ d: '2014-03-07',calorie: 1800},
+{ d: '2014-03-08',calorie: 1900},
+{ d: '2014-03-09',calorie: 1600},
+{ d: '2014-03-10',calorie: 2700},
+{ d: '2014-03-11',calorie: 1300},
+{ d: '2014-03-12',calorie: 1489},
+{ d: '2014-03-13',calorie: 1687},
+{ d: '2014-03-14',calorie: 2356},
+{ d: '2014-03-15',calorie: 2256},
+{ d: '2014-03-16',calorie: 1456},
+{ d: '2014-03-17',calorie: 1856}
+],
+     // The name of the data record attribute that contains x-values.
+     xkey: 'd',
+     // A list of names of data record attributes that contain y-values.
+     ykeys: ['calorie'],
+     // Labels for the ykeys -- will be displayed when you hover over the
+     // chart.
+     xLabels: "day",
+     labels: ['Calories consumed this day'],
+
+     smooth: false,
+
+     hideHover: 'auto',
+
+     goals: [1800,2200]});
+
+     new Morris.Area({
+               // ID of the element in which to draw the chart.
+element: 'chartTwo',
+// Chart data records -- each entry in this array corresponds to a point on
+// the chart.
+data: [
+{ d: '2014-03-01', sleep: 3 },
+{ d: '2014-03-02', sleep: 5 },
+{ d: '2014-03-03', sleep: 6 },
+{ d: '2014-03-04', sleep: 4 },
+{ d: '2014-03-05', sleep: 2 },
+{ d: '2014-03-06', sleep: 7 },
+{ d: '2014-03-07', sleep: 8 },
+{ d: '2014-03-08', sleep: 9 },
+{ d: '2014-03-09', sleep: 6 },
+{ d: '2014-03-10',sleep: 13 },
+{ d: '2014-03-11',sleep: 2 },
+{ d: '2014-03-12',sleep: 9 },
+{ d: '2014-03-13',sleep: 5 },
+{ d: '2014-03-14',sleep: 4 },
+{ d: '2014-03-15',sleep: 6 },
+{ d: '2014-03-16',sleep: 7 },
+{ d: '2014-03-17',sleep: 8 }
+],
+     // The name of the data record attribute that contains x-values.
+     xkey: 'd',
+     // A list of names of data record attributes that contain y-values.
+     ykeys: ['sleep'],
+     // Labels for the ykeys -- will be displayed when you hover over the
+     // chart.
+     xLabels: "day",
+     labels: ['Hours of Sleep'],
+
+     smooth: false,
+
+     hideHover: 'auto',
+
+     goals: [7.5,8.5]});
+
+</script>
+
+<script>
+$(document).foundation();
+</script>
